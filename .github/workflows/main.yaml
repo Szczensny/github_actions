@@ -14,3 +14,10 @@ jobs:
       
       - name: Run a one-line script
         run: echo Hello, world!
+
+  deploy:
+    runs-on: ubuntu-latest
+    needs: build
+    steps: 
+      - name: Run echo
+        run: echo hello there!
